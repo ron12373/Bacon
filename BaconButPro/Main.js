@@ -740,7 +740,7 @@ async function delta() {
                     type: o ? "Turnstile" : ""
                 })
             });
-        n = await n.json(), await sleep(4e3);
+        n = await n.json(), await sleep(5e3);
         let s = await (await fetch(`https://bypass.rblx.workers.dev/delta-decrypt?url=${encodeURIComponent(n.redirect)}`)).text(),
             i = new URL(s).searchParams.get("r"),
             c = atob(i);
