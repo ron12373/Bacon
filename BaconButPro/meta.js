@@ -49,6 +49,6 @@
 // @connect      hohohubv-ac90f67762c4.herokuapp.com
 // @connect      tsuo-script.xyz
 // @icon         https://cdn141.picsart.com/351217840073211.png
-// @downloadURL https://raw.githubusercontent.com/Bacon-But-Pro/Userscript.js/main/baconbutpro.meta.js
-// @updateURL https://raw.githubusercontent.com/Bacon-But-Pro/Userscript.js/main/baconbutpro.meta.js
+// @downloadURL https://raw.githubusercontent.com/ron12373/Userscript-free/main/BaconButPro/meta.js
+// @updateURL https://raw.githubusercontent.com/ron12373/Userscript-free/main/BaconButPro/meta.js
 // ==/UserScript==
