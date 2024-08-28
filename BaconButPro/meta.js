@@ -24,7 +24,6 @@
 // @match        https://links-loot.com/s?*
 // @match        https://linksloot.net/s?*
 // @match        https://spdmteam.com/key-system*
-// @match        *://trigonevo.com/getkey/?hwid=*
 // @require     https://greasyfork.org/scripts/464929-module-jquery-xiaoying/code/module_jquery_XiaoYing.js
 // @require     https://greasyfork.org/scripts/464780-global-module/code/global_module.js
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js
@@ -49,6 +48,6 @@
 // @connect      hohohubv-ac90f67762c4.herokuapp.com
 // @connect      tsuo-script.xyz
 // @icon         https://cdn141.picsart.com/351217840073211.png
-// @downloadURL https://raw.githubusercontent.com/ron12373/Userscript-free/main/BaconButPro/meta.js
-// @updateURL https://raw.githubusercontent.com/ron12373/Userscript-free/main/BaconButPro/meta.js
+// @downloadURL https://raw.githubusercontent.com/Bacon-But-Pro/Userscript.js/main/baconbutpro.meta.js
+// @updateURL https://raw.githubusercontent.com/Bacon-But-Pro/Userscript.js/main/baconbutpro.meta.js
 // ==/UserScript==
