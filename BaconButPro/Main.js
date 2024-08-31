@@ -515,8 +515,7 @@ async function linkvertise() {
     const currentUrl = window.location.href;
     let errorShown = false;
 
-    // Function to create a notification box
-    function showNotification(message, useBypassCity = false) {
+    function showNotification(message, useBypassCity = false, key = null) {
         const notificationContainer = document.createElement('div');
         notificationContainer.id = 'notification-container';
         notificationContainer.style.position = 'fixed';
@@ -537,6 +536,15 @@ async function linkvertise() {
         notificationElement.innerText = message;
 
         notificationContainer.appendChild(notificationElement);
+
+        if (key) {
+            const keyElement = document.createElement('div');
+            keyElement.style.marginTop = '10px';
+            keyElement.style.fontSize = '16px';
+            keyElement.style.fontWeight = 'bold';
+            keyElement.innerText = `${key}`;
+            notificationContainer.appendChild(keyElement);
+        }
 
         if (useBypassCity) {
             const buttonContainer = document.createElement('div');
@@ -577,7 +585,6 @@ async function linkvertise() {
         document.body.appendChild(notificationContainer);
     }
 
-    // Remove existing notification if any
     function removeNotification() {
         const existingNotificationContainer = document.getElementById('notification-container');
         if (existingNotificationContainer) {
@@ -586,31 +593,42 @@ async function linkvertise() {
     }
 
     try {
-        await sleep(2000); // Sleep for 2000 milliseconds (2 seconds)
+        const delay = 2000; // Default delay
+        await sleep(delay);
 
-        // Try the first API
         let response = await fetch("https://api.bypass.vip/bypass?url=" + currentUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        if (data.result.startsWith("https://")) {
-            window.location.href = data.result;
+        const resultUrl = data.result;
+
+        // Check if the result URL matches the specified patterns
+        const delayedUrls = [
+            "https://keyrblx.com/getkey/",
+            "https://pandadevelopment.net/getkey?",
+            "https://test.pandadevelopment.net/getkey?"
+        ];
+
+        if (delayedUrls.some(link => resultUrl.startsWith(link))) {
+            await sleep(10000); // Wait 10 seconds before reacting to these URLs
+        }
+
+        if (resultUrl.startsWith("https://")) {
+            window.location.href = resultUrl;
+        } else if (resultUrl) {
+            console.warn("API returned a key instead of a URL.");
+            showNotification("API returned a key:", false, resultUrl);
         } else {
-            console.warn("First API response doesn't contain a valid URL. Redirecting to bypass.city.");
-            throw new Error("First API response doesn't contain a valid URL");
+            console.warn("API response doesn't contain a valid URL or key. Redirecting to bypass.city.");
+            throw new Error("API response doesn't contain a valid URL or key");
         }
     } catch (e) {
         if (!errorShown) {
             console.error("Error: API might be offline. Do you want to use Bypass.city?", e);
-
-            // Remove any existing notification to avoid duplicates
             removeNotification();
-
-            // Show the notification box with Yes and No options
             showNotification("API might be offline. Do you want to use Bypass.city?", true);
-
             errorShown = true;
         }
     }
