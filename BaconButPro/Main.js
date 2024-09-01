@@ -281,6 +281,8 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
             window.location.assign(`https://pandadevelopment.net/getkey?hwid=${hwid}&service=${service}`);
         }
 
+        await sleep(10000);
+
         let sleepTime = 3000;
         Object.keys(customSleepTimes).forEach(key => {
             if (service == key) {
