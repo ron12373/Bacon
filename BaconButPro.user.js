@@ -2,7 +2,7 @@
 // @name         Bypass Key System
 // @homepageURL  https://discord.gg/gFNAH7WNZj
 // @namespace    https://greasyfork.org/en/scripts/493960-arceus-bypass
-// @version      1.9.6
+// @version      1.9.7
 // @description  Bypass Arceus, Hydrogen, Delta, Trigon, Vegax, Codex, Linkvertise, panda, etc,...
 // @author       Bacon But Pro
 // @match        https://linkvertise.com/376138/arceus-x-neo-key-system-1?o=sharing*
