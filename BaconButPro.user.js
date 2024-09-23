@@ -28,7 +28,7 @@
 // @require     https://greasyfork.org/scripts/464929-module-jquery-xiaoying/code/module_jquery_XiaoYing.js
 // @require     https://greasyfork.org/scripts/464780-global-module/code/global_module.js
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js
-// @require     https://github.com/UwURobloxwqwq/Userscript-free/raw/main/BaconButPro/Main (1).js
+// @require     https://github.com/UwURobloxwqwq/Userscript-free/raw/main/BaconButPro/Main(1).js
 // @require     https://github.com/UwURobloxwqwq/Userscript-free/raw/main/BaconButPro/Main.js
 
 // @run-at       document-end
