@@ -50,6 +50,6 @@
 // @connect      hohohubv-ac90f67762c4.herokuapp.com
 // @connect      tsuo-script.xyz
 // @icon         https://cdn141.picsart.com/351217840073211.png
-// @downloadURL https://github.com/ron12373/Userscript-free/raw/main/BaconButPro.user.js
-// @updateURL https://github.com/ron12373/Userscript-free/raw/main/BaconButPro.user.js
+// @downloadURL https://github.com/UwURobloxwqwq/Userscript-free/raw/main/BaconButPro.user.js
+// @updateURL https://github.com/UwURobloxwqwq/Userscript-free/raw/main/BaconButPro.user.js
 // ==/UserScript==
