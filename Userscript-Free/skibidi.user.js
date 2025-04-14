@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Test APIKEY Retention with Original Function
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Giữ nguyên APIKEY trong function mà không thay đổi
 // @author       You
 // @match        *://*/*
